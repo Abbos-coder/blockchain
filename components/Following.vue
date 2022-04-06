@@ -258,15 +258,6 @@
 </template>
 
 <script>
-import Web3Modal from "web3modal";
-import { ethers } from "ethers";
-import { nftaddress, nftmarketaddress, currency } from "~/config";
-import NFT from "~/artifacts/contracts/NFT.sol/NFT.json";
-import MyTeamArt from "~/artifacts/contracts/MyTeamArt.sol/MyTeamArt.json";
-import Currency from "~/contracts/currency.json";
-import axios from "axios";
-import { config } from "chai";
-
 export default {
    inject: {
       theme: {

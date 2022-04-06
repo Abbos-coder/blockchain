@@ -57,14 +57,6 @@
 </template>
 
 <script>
-import Web3Modal from "web3modal";
-import { ethers } from "ethers";
-import { currency, nftaddress, nftmarketaddress } from "~/config";
-import MyTeamArt from "~/artifacts/contracts/MyTeamArt.sol/MyTeamArt.json";
-import NFT from "~/artifacts/contracts/NFT.sol/NFT.json";
-import Currency from "~/contracts/currency.json";
-import axios from "axios";
-
 export default {
    name: "noFooter",
    data: () => ({

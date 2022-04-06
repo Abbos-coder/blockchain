@@ -81,14 +81,6 @@
 <script>
 import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.min.css";
-import { nftaddress, nftmarketaddress } from "~/config";
-import { ethers } from "ethers";
-import Web3Modal from "web3modal";
-
-import NFT from "../artifacts/contracts/NFT.sol/NFT.json";
-import MyTeamArt from "../artifacts/contracts/MyTeamArt.sol/MyTeamArt.json";
-import axios from "axios";
-
 Swiper.use(Navigation, Pagination);
 
 export default {
@@ -114,43 +106,6 @@ export default {
          }
          if (!!min_arr.length) new_array.push(min_arr);
          return new_array;
-      },
-      async loadNFTs() {
-         const data = await this.$daddy.marketContract.fetchMarketItems(1, 20);
-         return await Promise.all(
-            data.map(async (i) => {
-               const tokenUri = await this.$daddy.nftContract.tokenURI(
-                  i.tokenId
-               );
-               const meta = await axios.get(tokenUri);
-               let price = ethers.utils.formatUnits(
-                  i.price.toString(),
-                  "szabo"
-               );
-               return {
-                  price,
-                  itemId: i.itemId.toNumber(),
-                  seller: i.seller,
-                  owner: i.owner,
-                  image: meta.data.image,
-                  name: meta.data.name,
-                  description: meta.data.description,
-               };
-            })
-         );
-      },
-      populateCarousel() {
-         try {
-            if (!this.$store.state.wrong_net) {
-               this.loadNFTs()
-                  .then((r) => {
-                     this.elements = this.arrFunction(r);
-                  })
-                  .catch((reason) => console.log(`Error in loading NFTs`));
-            }
-         } catch (error) {
-            console.log("Error populating carousel: ", error);
-         }
       },
    },
    async mounted() {
@@ -224,7 +179,6 @@ export default {
       while (!this.$daddy.ready) {
          await this.$daddy.sleep(500);
       }
-      this.populateCarousel();
    },
 };
 </script>

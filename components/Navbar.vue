@@ -462,14 +462,6 @@ export default {
       document.addEventListener("click", (event) => {
          const profile = document.querySelector(".navbar__profile");
          const avatar = document.querySelector(".navbar__avatar");
-
-         //  if (event.target == profile || event.target == avatar) {
-         //     return;
-         //  } else {
-         //     profile.classList.remove("active");
-         //  }
-
-         //  for search result
          let elem1 = profile.contains(event.target);
          let elem2 = avatar.contains(event.target);
 

@@ -280,7 +280,7 @@ export default {
          /* first, upload to IPFS */
          try {
             const added = await client.add(this.file, {
-               progress: (r) => console.log(`received: ${r}`),
+               progress: (r) => null,
             });
             this.nft.file_url = `https://ipfs.io/ipfs/${added.path}`;
          } catch (error) {
@@ -295,7 +295,6 @@ export default {
          try {
             const added = await client.add(data);
             this.nft.metadata_url = `https://ipfs.infura.io/ipfs/${added.path}`;
-            console.log(`Added nft metadata ${this.nft.metadata_url}`);
             this.$store.state.confirm_msg = "Creating NFT";
             this.$store.state.confirm = true;
             /* after file is uploaded to IPFS, pass the URL to save it on BSC */
@@ -319,7 +318,7 @@ export default {
                await this.putTokenOnSale(this.nft.token_id);
             }
          } catch (error) {
-            console.log("Error uploading file: ", error);
+            console.log(error);
             this.$store.state.confirm = false;
          }
       },
@@ -335,9 +334,6 @@ export default {
             this.nft.price = ethers.utils
                .parseUnits(this.nft.price, "szabo")
                .toString();
-            console.log("Item id: ", this.nft.item_id);
-            console.log("Item price: ", this.nft.price);
-            console.log(this.nft);
          } catch (error) {
             console.log("Error creating market item: ", error);
          }

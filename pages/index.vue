@@ -11,9 +11,7 @@
 </template>
 
 <script>
-export default {
-   async mounted() {},
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
