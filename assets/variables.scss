@@ -1,0 +1,56 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono:wght@400;500;600&display=swap");
+
+:root {
+	--nColor: #04040580 !important;
+	--dColor: #181818 !important;
+	--dColor2: #000 !important;
+	--dftColor: #04040580 !important;
+	--lColor: #ffff !important;
+	--navColor: rgba(255, 255, 255, 0.5);
+	--mainColor: #fff;
+	--selColor: #1f1f1f;
+	--title: 32px;
+	--border: rgb(235, 235, 235);
+	--hover: #e6e6e6;
+	--btn: #f2f2f2;
+	--bgColor: #f9f9f9;
+	--bgBtn: #cce0ff;
+	--bgpopup: #f4f4f4;
+	--popup: #ebebeb;
+}
+body {
+	background-color: var(--bgColor) !important;
+	transition: all linear 0.2s;
+	font-family: "Poppins", sans-serif !important;
+	/* font-family: "Roboto Mono", monospace; */
+	background-color: var(--lColor) !important;
+}
+.v-application {
+	font-family: "Poppins", sans-serif !important;
+}
+body.dark {
+	--popup: #2e2e2e;
+	--bgpopup: #1f1f1f;
+	--bgBtn: #172841;
+	--bgColor: #121212;
+	--btn: #2a2a2a;
+	--selColor: #ffff;
+	--mainColor: #121212;
+	--dColor: #ffff !important;
+	--dColor2: #ffff !important;
+	--dftColor: #ffffffad !important;
+	--lColor: #000 !important;
+	--navColor: #121212a6;
+	--hover: #767676;
+	--border: rgba(153, 153, 153, 0.2);
+
+	background-color: var(--bgColor) !important;
+}
+// .v-application ul,
+// .v-application ol {
+// 	padding-left: 0px !important;
+// }

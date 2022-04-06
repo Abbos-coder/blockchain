@@ -1,0 +1,58 @@
+[
+  {
+    "name": "create",
+    "path": "/create",
+    "component": "/home/abbos/FRONTEND/mycart/pages/create.vue",
+    "chunkName": "pages/create",
+    "_name": "_648863f4"
+  },
+  {
+    "name": "edit-profile",
+    "path": "/edit-profile",
+    "component": "/home/abbos/FRONTEND/mycart/pages/edit-profile.vue",
+    "chunkName": "pages/edit-profile",
+    "_name": "_7f6dbb70"
+  },
+  {
+    "name": "explore",
+    "path": "/explore",
+    "component": "/home/abbos/FRONTEND/mycart/pages/explore.vue",
+    "chunkName": "pages/explore",
+    "_name": "_99183d0e"
+  },
+  {
+    "name": "following",
+    "path": "/following",
+    "component": "/home/abbos/FRONTEND/mycart/pages/following.vue",
+    "chunkName": "pages/following",
+    "_name": "_42f46ef7"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "/home/abbos/FRONTEND/mycart/pages/profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_1460f58f"
+  },
+  {
+    "name": "users-id",
+    "path": "/users/:id?",
+    "component": "/home/abbos/FRONTEND/mycart/pages/users/_id.vue",
+    "chunkName": "pages/users/_id",
+    "_name": "_02ec7499"
+  },
+  {
+    "name": "items-address-id",
+    "path": "/items/:address?/:id?",
+    "component": "/home/abbos/FRONTEND/mycart/pages/items/_address/_id.vue",
+    "chunkName": "pages/items/_address/_id",
+    "_name": "_02817c4e"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/abbos/FRONTEND/mycart/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_16521890"
+  }
+]

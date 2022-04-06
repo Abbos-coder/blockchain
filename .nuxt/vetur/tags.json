@@ -1,0 +1,38 @@
+{
+  "Carousel": {
+    "description": "Auto imported from components/Carousel.vue"
+  },
+  "Category": {
+    "description": "Auto imported from components/Category.vue"
+  },
+  "Explore": {
+    "description": "Auto imported from components/Explore.vue"
+  },
+  "Following": {
+    "description": "Auto imported from components/Following.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "LogIn": {
+    "description": "Auto imported from components/LogIn.vue"
+  },
+  "MostLiked": {
+    "description": "Auto imported from components/MostLiked.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from components/Navbar.vue"
+  },
+  "ProfileTabs": {
+    "description": "Auto imported from components/ProfileTabs.vue"
+  },
+  "Skeleton": {
+    "description": "Auto imported from components/Skeleton.vue"
+  },
+  "Tabs": {
+    "description": "Auto imported from components/Tabs.vue"
+  },
+  "TopUsers": {
+    "description": "Auto imported from components/TopUsers.vue"
+  }
+}
