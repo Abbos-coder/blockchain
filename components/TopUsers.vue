@@ -110,26 +110,9 @@ export default {
       topUserFull: [],
       topInfo: {
          client: "sellers",
-         days: "1 day",
       },
       usdPrice: null,
-      days: [
-         {
-            id: 0,
-            day: "1 day",
-            isCheck: true,
-         },
-         {
-            id: 1,
-            day: "7 days",
-            isCheck: false,
-         },
-         {
-            id: 2,
-            day: "30 days",
-            isCheck: false,
-         },
-      ],
+
       clients: [
          {
             id: 0,
@@ -145,12 +128,6 @@ export default {
       count: 0,
    }),
    methods: {
-      currentDays(option) {
-         this.topInfo.days = option.day;
-         this.days.forEach((element, index) => {
-            element.isCheck = index === option.id;
-         });
-      },
       async currentClient(option) {
          this.topInfo.client = option.type;
          this.clients.forEach((element, index) => {
@@ -186,28 +163,6 @@ export default {
       selectClients() {
          const selectsClient = document.querySelector("#selects1");
          selectsClient.classList.toggle("open");
-
-         //  const selectsDay = document.querySelector("#selects2");
-         //  selectsDay.classList.remove("open");
-      },
-      selectDays() {
-         //  const selectsDay = document.querySelector("#selects2");
-         //  selectsDay.classList.toggle("open");
-
-         const selectsClient = document.querySelector("#selects1");
-         selectsClient.classList.remove("open");
-      },
-      viewProfile(data) {
-         const item = {
-            price: this.formatPrice(data.price),
-            itemId: data.itemId,
-            seller: data.seller,
-            owner: data.owner,
-            image: data.image,
-            name: data.name,
-            description: data.description,
-         };
-         this.$router.push({ path: "NFT", query: item });
       },
       async getUsdPrice() {
          return await this.$axios.get(
@@ -225,7 +180,7 @@ export default {
             );
             this.formTopUsers();
          })
-         .catch((reason) => console.log(reason));
+         .catch((error) => console.log(error));
    },
 };
 </script>

@@ -255,9 +255,6 @@
 </template>
 
 <script>
-import { ethers } from "ethers";
-import { nftaddress, nftmarketaddress } from "~/config";
-
 export default {
    inject: {
       theme: {

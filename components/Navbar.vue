@@ -30,7 +30,7 @@
                         class="rounded"
                         @click.prevent="
                            $router.push(
-                              `items/${item.contract}/${item.token_id}`
+                              `/items/${item.contract}/${item.token_id}`
                            )
                         "
                      >
@@ -53,7 +53,7 @@
                            class="navbar__search--result-name"
                            @click.prevent="
                               $router.push(
-                                 `items/${item.contract}/${item.token_id}`
+                                 `/items/${item.contract}/${item.token_id}`
                               )
                            "
                         >
@@ -255,7 +255,7 @@
                         class="rounded"
                         @click.prevent="
                            $router.push(
-                              `items/${item.contract}/${item.token_id}`
+                              `/items/${item.contract}/${item.token_id}`
                            )
                         "
                      >
@@ -278,7 +278,7 @@
                            class="navbar__search--result-name"
                            @click.prevent="
                               $router.push(
-                                 `items/${item.contract}/${item.token_id}`
+                                 `/items/${item.contract}/${item.token_id}`
                               )
                            "
                         >
@@ -462,14 +462,6 @@ export default {
       document.addEventListener("click", (event) => {
          const profile = document.querySelector(".navbar__profile");
          const avatar = document.querySelector(".navbar__avatar");
-
-         //  if (event.target == profile || event.target == avatar) {
-         //     return;
-         //  } else {
-         //     profile.classList.remove("active");
-         //  }
-
-         //  for search result
          let elem1 = profile.contains(event.target);
          let elem2 = avatar.contains(event.target);
 

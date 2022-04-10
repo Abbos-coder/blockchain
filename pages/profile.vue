@@ -232,9 +232,7 @@
 <script>
 export default {
    data: () => ({
-      //  ? followings data
       following_user: [],
-      // ?  follower data
       follower_user: [],
       current_user: [],
       account: "",

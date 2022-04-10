@@ -40,9 +40,6 @@ export default {
          default: { isDark: true },
       },
    },
-   mounted() {
-      // this.items = this.$store.state.loaderItems;
-   },
 };
 </script>
 

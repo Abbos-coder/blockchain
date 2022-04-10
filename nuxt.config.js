@@ -1,9 +1,9 @@
 import colors from "vuetify/es5/util/colors";
 
 export default {
+   target: "static",
    // Global page headers: https://go.nuxtjs.dev/config-head
    head: {
-      // titleTemplate: "%s - rarible.com",
       title: "MyteamArt",
       htmlAttrs: {
          lang: "en",
@@ -74,17 +74,7 @@ export default {
                property: "token",
                global: true,
                type: "Token",
-               // required: true,
             },
-            // user: {
-            //    property: 'user',
-            // autoFetch: true
-            // },
-            // endpoints: {
-            // login: { url: '/api/auth/login', method: 'post' },
-            // logout: { url: '/api/auth/logout', method: 'post' },
-            // user: { url: '/api/auth/user', method: 'get' }
-            // }
          },
       },
    },
@@ -117,7 +107,6 @@ export default {
          },
       },
    },
-   target: "static",
    // Build Configuration: https://go.nuxtjs.dev/config-build
    build: {},
    server: {
