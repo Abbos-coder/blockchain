@@ -30,7 +30,7 @@
                         class="rounded"
                         @click.prevent="
                            $router.push(
-                              `items/${item.contract}/${item.token_id}`
+                              `/items/${item.contract}/${item.token_id}`
                            )
                         "
                      >
@@ -53,7 +53,7 @@
                            class="navbar__search--result-name"
                            @click.prevent="
                               $router.push(
-                                 `items/${item.contract}/${item.token_id}`
+                                 `/items/${item.contract}/${item.token_id}`
                               )
                            "
                         >
@@ -255,7 +255,7 @@
                         class="rounded"
                         @click.prevent="
                            $router.push(
-                              `items/${item.contract}/${item.token_id}`
+                              `/items/${item.contract}/${item.token_id}`
                            )
                         "
                      >
@@ -278,7 +278,7 @@
                            class="navbar__search--result-name"
                            @click.prevent="
                               $router.push(
-                                 `items/${item.contract}/${item.token_id}`
+                                 `/items/${item.contract}/${item.token_id}`
                               )
                            "
                         >
